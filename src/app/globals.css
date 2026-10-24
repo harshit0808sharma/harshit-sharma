@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #1E3A2B;
+  --theme-accent: #FFB800;
+  --theme-dark: #181818;
+  --theme-light: #FAF9F5;
+  --theme-font-heading: 'Space Grotesk', var(--font-geist-sans), sans-serif;
+  --theme-font-body: 'Inter', var(--font-geist-sans), sans-serif;
+
+  --bg-page: var(--theme-light, #FAF9F5);
+  --forest-green: var(--theme-primary, #1E3A2B);
+  --forest-dark: #162D21;
+  --accent-yellow: var(--theme-accent, #FFB800);
+  --text-dark: var(--theme-dark, #181818);
+  --text-muted: #666666;
+}
+
+/* Completely remove webkit scrollbar in Chrome, Safari, Edge, Opera */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  display: none !important;
+  background: transparent !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+  background: transparent !important;
+}
+
+/* Completely remove scrollbar for Firefox, IE, Edge standards */
+html,
+body,
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  font-family: var(--theme-font-body, var(--font-geist-sans)), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--theme-font-heading, var(--theme-font-body, var(--font-geist-sans))), sans-serif;
+}
+
+/* Custom cursive font for signature */
+.font-signature {
+  font-family: 'Caveat', 'Dancing Script', 'Brush Script MT', cursive;
+}
